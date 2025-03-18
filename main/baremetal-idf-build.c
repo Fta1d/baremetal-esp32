@@ -8,9 +8,9 @@
 #define TIMG0_WDTFEED_REG       0x3FF5F060
 
 void feed_wdt() {
-    *((volatile uint32_t*) TIM_G0_WDT_WPROTECT_REG) = 0x50D83AA1;  // Розблокування WDT
-    *((volatile uint32_t*) TIMG0_WDTFEED_REG) = 1;                // Скидання WDT
-    *((volatile uint32_t*) TIM_G0_WDT_WPROTECT_REG) = 0;            // Блокування WDT
+    *((volatile uint32_t*) TIM_G0_WDT_WPROTECT_REG) = 0x50D83AA1;  
+    *((volatile uint32_t*) TIMG0_WDTFEED_REG) = 1;                
+    *((volatile uint32_t*) TIM_G0_WDT_WPROTECT_REG) = 0;            
 }
 
 
